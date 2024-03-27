@@ -469,25 +469,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Anna Vaz\\.nuget\\packages\\": {}
+    "C:\\Users\\Pedro.Milani\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+      "projectUniqueName": "C:\\projetos\\Roger_Pedro\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
       "projectName": "API_FESTAJUNINA",
-      "projectPath": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
-      "packagesPath": "C:\\Users\\Anna Vaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\obj\\",
+      "projectPath": "C:\\projetos\\Roger_Pedro\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+      "packagesPath": "C:\\Users\\Pedro.Milani\\.nuget\\packages\\",
+      "outputPath": "C:\\projetos\\Roger_Pedro\\festa_junina\\API_FESTAJUNINA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Anna Vaz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Pedro.Milani\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -500,6 +499,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -526,6 +530,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.16, 7.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.16, 7.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.16, 7.0.16]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.16, 7.0.16]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -534,7 +556,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
