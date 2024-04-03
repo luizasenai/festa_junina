@@ -1,5 +1,9 @@
 is_global = true
+<<<<<<< Updated upstream
+build_property.TargetFramework = net8.0
+=======
 build_property.TargetFramework = net7.0
+>>>>>>> Stashed changes
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
@@ -9,11 +13,19 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = API_FESTAJUNINA
 build_property.RootNamespace = API_FESTAJUNINA
-build_property.ProjectDir = C:\Users\lucas.unzer\Documents\unzer\carlao\segundo_ano\back\festa_junina\API_FESTAJUNINA\
+<<<<<<< Updated upstream
+build_property.ProjectDir = C:\projetos\festa_junina\API_FESTAJUNINA\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\projetos\festa_junina\API_FESTAJUNINA
+=======
+build_property.ProjectDir = C:\Projetos\festa_junina\API_FESTAJUNINA\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\lucas.unzer\Documents\unzer\carlao\segundo_ano\back\festa_junina\API_FESTAJUNINA
+build_property.MSBuildProjectDirectory = C:\Projetos\festa_junina\API_FESTAJUNINA
+>>>>>>> Stashed changes
 build_property._RazorSourceGeneratorDebug = 
