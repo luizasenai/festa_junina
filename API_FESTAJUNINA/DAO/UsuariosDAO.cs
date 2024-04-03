@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
+using System.Data;
 using API_FESTAJUNINA.Models;
+using API_FESTAJUNINA.Repository;
 using MySql.Data.MySqlClient;
 
 namespace API_FESTAJUNINA.DAO
@@ -31,14 +33,14 @@ namespace API_FESTAJUNINA.DAO
                     {
                         while(reader.Read())
                             {
-                                Usuarios usuarios = new Usuarios();
-                                usuarios.IdUsuario = reader.GetInt32("id_usuarios");
-                                usuarios.NomeInteiro = reader.GetString("nome_inteiro");
-                                usuarios.Email = reader.GetString("email");
-                                usuarios.Senha = reader.GetString("senha");
-                                usuarios.Telefone = reader.GetString("telefone");
-                                usuarios.Perfil = reader.GetString("perfil");
-                                usuarios.Status = reader.GetString("status");
+                                Usuarios usuario = new Usuarios();
+                                usuario.IdUsuario = reader.GetInt32("id_usuarios");
+                                usuario.NomeInteiro = reader.GetString("nome_inteiro");
+                                usuario.Email = reader.GetString("email");
+                                usuario.Senha = reader.GetString("senha");
+                                usuario.Telefone = reader.GetString("telefone");
+                                usuario.Perfil = reader.GetString("perfil");
+                                usuario.Status = reader.GetString("status");
                             }
                     }
                 }
