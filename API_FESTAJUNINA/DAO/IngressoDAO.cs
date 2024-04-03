@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using API_FESTAJUNINA.Models;
 using API_FESTAJUNINA.Repository;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI;
+
 
 namespace API_FESTAJUNINA.DAO
 {
@@ -34,13 +34,12 @@ namespace API_FESTAJUNINA.DAO
                     while (reader.Read())
                     {
                         Ingresso ingresso = new Ingresso();
-                        ingresso.IdIngresso = reader.GetInt32("id_personagem");
+                        ingresso.IdIngresso = reader.GetInt32("id_ingresso");
                         ingresso.Valor = reader.GetString("valor");
                         ingresso.Status = reader.GetString("status");
                         ingresso.Tipo = reader.GetString("tipo");
                         ingresso.CodigoQr = reader.GetString("codigo_qr");
-                        ingresso.UsuarioId = reader.GetInt32("usuario_id_usuario");
-                        ingresso.UsuarioPedido = reader.GetInt32("usuario_pedido_id_usuario");
+                        ingresso.UsuarioPedido = reader.GetInt32("pedido_id_pedido");
                         ingresso.LotesId = reader.GetInt32("lotes_id_lotes");
                         ingressos.Add(ingresso);
                     }
@@ -79,8 +78,7 @@ namespace API_FESTAJUNINA.DAO
                         ingresso.Status = reader.GetString("status");
                         ingresso.Tipo = reader.GetString("tipo");
                         ingresso.CodigoQr = reader.GetString("codigo_qr");
-                        ingresso.UsuarioId = reader.GetInt32("usuario_id_usuario");
-                        ingresso.UsuarioPedido = reader.GetInt32("usuario_pedido_id_usuario");
+                        ingresso.UsuarioPedido = reader.GetInt32("pedido_id_pedido");
                         ingresso.LotesId = reader.GetInt32("lotes_id_lotes");
 
                     }
@@ -104,8 +102,8 @@ namespace API_FESTAJUNINA.DAO
 
         public void CriarIngresso(Ingresso ingresso)
         {
-            string query = "INSERT TO ingresso (id_ingresso,valor, status, tipo, codigo-qr, usuario_id_usuario, usuario_pedido_id_usuario, lotes_id_lotes)" +
-                           "values (@IdIngresso, @Valor, @Status, @Tipo, @CodigoQr, @UsuarioId, @UsuarioPedido, @LotesId)";
+            string query = "INSERT INTO ingresso (valor, status, tipo, codigo_qr,pedido_id_pedido, lotes_id_lotes)" +
+                           "values (@Valor, @Status, @Tipo, @CodigoQr, @IdPedido, @LotesId)";
 
             Console.WriteLine(Guid.NewGuid());
             try
@@ -117,6 +115,8 @@ namespace API_FESTAJUNINA.DAO
                     command.Parameters.AddWithValue("@Status", "RESERVADO");
                     command.Parameters.AddWithValue("@Tipo", ingresso.Tipo);
                     command.Parameters.AddWithValue("@CodigoQr", Guid.NewGuid().ToString());
+                    command.Parameters.AddWithValue("@IdPedido", ingresso.UsuarioPedido);
+                    command.Parameters.AddWithValue("@LotesId", ingresso.LotesId);
                     command.ExecuteNonQuery();
                 }
             }

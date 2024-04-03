@@ -4,13 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-<<<<<<< Updated upstream
       "applicationUrl": "http://localhost:7831",
       "sslPort": 44350
-=======
-      "applicationUrl": "http://localhost:53944",
-      "sslPort": 44311
->>>>>>> Stashed changes
     }
   },
   "profiles": {
@@ -19,11 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-<<<<<<< Updated upstream
       "applicationUrl": "http://localhost:5037",
-=======
-      "applicationUrl": "http://localhost:5002",
->>>>>>> Stashed changes
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -33,11 +24,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-<<<<<<< Updated upstream
       "applicationUrl": "https://localhost:7166;http://localhost:5037",
-=======
-      "applicationUrl": "https://localhost:7202;http://localhost:5002",
->>>>>>> Stashed changes
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
