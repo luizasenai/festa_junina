@@ -1,6 +1,0 @@
-@API_FESTAJUNINA_HostAddress = http://localhost:5267
-
-GET {{API_FESTAJUNINA_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
