@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API_FESTAJUNINA.Models;
+using API_FESTAJUNINA.Repository;
 using MySql.Data.MySqlClient;
 
 namespace API_FESTAJUNINA.DAO
@@ -13,7 +14,7 @@ namespace API_FESTAJUNINA.DAO
 
         public IngressoDAO()
         {
-            _connection = MySqlConnectionFactory.getConnection();
+            _connection = MySqlConnectionFactory.GetConnection();
         }
 
         public List<Ingresso> GetAll()
@@ -56,6 +57,12 @@ namespace API_FESTAJUNINA.DAO
                 _connection.Close();
             }
             return ingressos;
+        }
+
+        public void CriarIngresso(Ingresso ingresso)
+        {
+            string query = "INSERT TO ingresso (id_ingresso,valor, status, tipo, codigo-qr, usuario_id_usuario, usuario_pedido_id_usuario, lotes_id_lotes)" +
+                           "values (@IdIngresso, @Valor, @Status, @Tipo, @CodigoQr, @UsuarioId, @UsuarioPedido, @LotesId)";
         }
     }
 }
