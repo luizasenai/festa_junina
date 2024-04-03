@@ -13,25 +13,25 @@ namespace API_FESTAJUNINA.Controllers;
 public class UsuariosController : ControllerBase
 {
 
-    private UsuariosDAO _UsuariosDAO;
+    private UsuariosDAO _usuariosDAO;
     private object usuarios;
 
     public UsuariosController()
     {
-        _UsuariosDAO = new UsuariosDAO();
+        _usuariosDAO = new UsuariosDAO();
     }
 
     [HttpGet]
     public IActionResult GetAll()
     {
-        var personagem = _UsuariosDAO.GetAll();
+        var personagem = _usuariosDAO.GetAll();
         return Ok(usuarios);
     }
 
     [HttpGet("{id}")]
     public IActionResult GetId(int id)
     {
-        var Usuarios = _UsuariosDAO;
+        var Usuarios = _usuariosDAO;
         if (Usuarios == null)
         {
             return NotFound();
