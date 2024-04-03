@@ -22,6 +22,7 @@
 DROP TABLE IF EXISTS `evento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `evento` (
   `id_evento` int NOT NULL AUTO_INCREMENT,
   `valor_unitario` double DEFAULT NULL,
   `quantidade_total` varchar(45) DEFAULT NULL,
