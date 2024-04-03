@@ -72,7 +72,11 @@
           }
         }
       },
+<<<<<<< Updated upstream
       "Microsoft.AspNetCore.OpenApi/7.0.9": {
+=======
+      "Microsoft.AspNetCore.OpenApi/7.0.10": {
+>>>>>>> Stashed changes
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
@@ -751,10 +755,17 @@
         "lib/netstandard2.1/K4os.Hash.xxHash.xml"
       ]
     },
+<<<<<<< Updated upstream
     "Microsoft.AspNetCore.OpenApi/7.0.9": {
       "sha512": "5kBnHntQTJqmYV66Khdl9OJ/j2Pw8cOKj8kNQuLCpfCsPbSijp334Vaad3vaGnG9Wpgq/VbSUSRxZOoroOe8zQ==",
       "type": "package",
       "path": "microsoft.aspnetcore.openapi/7.0.9",
+=======
+    "Microsoft.AspNetCore.OpenApi/7.0.10": {
+      "sha512": "p5LiYt1mFJdS70zyHoydahohko2pLIoXiXwANRZGYYyTXcYNQpNUOt+At+lUgGgRwta28sUKVhy2W/93j0qwhA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/7.0.10",
+>>>>>>> Stashed changes
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -762,7 +773,11 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
+<<<<<<< Updated upstream
         "microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
+=======
+        "microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+>>>>>>> Stashed changes
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -2238,17 +2253,27 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+<<<<<<< Updated upstream
       "Microsoft.AspNetCore.OpenApi >= 7.0.9",
       "Mysql.Data >= 8.3.0",
+=======
+      "Microsoft.AspNetCore.OpenApi >= 7.0.10",
+      "MySql.Data >= 8.3.0",
+>>>>>>> Stashed changes
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\lucas.unzer\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\julia.almeida\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\lucas.unzer\\Documents\\unzer\\carlao\\segundo_ano\\back\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
       "projectName": "API_FESTAJUNINA",
       "projectPath": "C:\\Users\\lucas.unzer\\Documents\\unzer\\carlao\\segundo_ano\\back\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
@@ -2257,6 +2282,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lucas.unzer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+      "projectName": "API_FESTAJUNINA",
+      "projectPath": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+      "packagesPath": "C:\\Users\\julia.almeida\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\julia.almeida\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> Stashed changes
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -2274,11 +2309,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2287,9 +2317,15 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
+<<<<<<< Updated upstream
             "version": "[7.0.9, )"
           },
           "Mysql.Data": {
+=======
+            "version": "[7.0.10, )"
+          },
+          "MySql.Data": {
+>>>>>>> Stashed changes
             "target": "Package",
             "version": "[8.3.0, )"
           },
@@ -2335,7 +2371,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }
