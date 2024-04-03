@@ -6,7 +6,7 @@ using API_FESTAJUNINA.DAO;
 using API_FESTAJUNINA.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Controllers
+namespace API_FESTAJUNINA.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,3 +1,5 @@
 
 /API_FESTAJUNINA/obj
 /API_FESTAJUNINA/bin
+API_FESTAJUNINA/Properties/launchSettings.json
+API_FESTAJUNINA/Repository/MySqlConnectionFactory.cs
