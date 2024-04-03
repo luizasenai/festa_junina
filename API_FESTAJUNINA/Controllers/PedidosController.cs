@@ -10,8 +10,9 @@ using Microsoft.Extensions.Logging;
 
 namespace API_FESTAJUNINA.Controllers
 {
-    [Route("[controller]")]
-    public class PedidosController : Controller
+   [ApiController]
+    [Route("api/[controller]")]
+    public class PedidosController : ControllerBase
     {
         private PedidoDAO _PedidoDAO;
 
