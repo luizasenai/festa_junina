@@ -9,26 +9,26 @@ namespace API_FESTAJUNINA.Models
     
     public class Lote
     {
-         [Column("idlote")]
+        [Column("id_lotes")]
         public int idlote { get; set; }
  
-        [Column("descricao")]
-        public string? Descricao { get; set; }
- 
-         [Column("valor_unitario")]
+        [Column("valor_unitario")]
         public double? ValorUnitario { get; set; }
  
-         [Column("quantidade_total")]
+        [Column("quantidade_total")]
         public int? QuantidadeTotal { get; set; }
  
-         [Column("saldo")]
+        [Column("saldo")]
         public int? Saldo { get; set; }
  
+        [Column("evento_id_evento")]
+        public int? IdEvento { get; set; }
+        
         [Column("ativo")]
         public bool Ativo { get; set; }
  
-        [Column("evento_idevento")]
-        public int? IdEvento { get; set; }
+        [Column("descricao")]
+        public string? Descricao { get; set; }
  
        
  

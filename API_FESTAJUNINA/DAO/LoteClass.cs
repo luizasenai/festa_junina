@@ -20,7 +20,7 @@ namespace API_FESTAJUNINA.DAO
             public List<Lote> GetAll()
             {
                 List<Lote> lotes= new List<Lote>();
-                string query = "SELECT * FROM lote";
+                string query = "SELECT * FROM lotes";
  
  
                 try
@@ -31,14 +31,14 @@ namespace API_FESTAJUNINA.DAO
                     {
                         while(reader.Read())
                         {
-                            Lote lote =new Lote();
-                            lote.idlote = reader.GetInt32("idlote");
+                            Lote lote = new Lote();
+                            lote.idlote = reader.GetInt32("id_lotes");
                             lote.Descricao = reader.GetString("descricao");
                             lote.ValorUnitario = reader.GetDouble("valor_unitario");
                             lote.QuantidadeTotal = reader.GetInt32("quantidade_total");
                             lote.Saldo = reader.GetInt32("saldo");
                             lote.Ativo = reader.GetBoolean("ativo");
-                            lote.IdEvento = reader.GetInt32("evento_idevento");
+                            lote.IdEvento = reader.GetInt32("evento_id_evento");
                             lotes.Add(lote);
                         }
                     }
@@ -65,7 +65,7 @@ namespace API_FESTAJUNINA.DAO
                 public Lote GetId(int id)
                 {
                     Lote lote = new Lote();
-                    string query = $"SELECT * FROM lote WHERE idlote = {id}";
+                    string query = $"SELECT * FROM lotes WHERE id_lotes = {id}";
                     try
                     {
                         _connection.Open();
@@ -74,14 +74,14 @@ namespace API_FESTAJUNINA.DAO
                         {
                             if(reader.Read())
                             {
-                                Lote lote1 =new Lote();
-                                lote.idlote = reader.GetInt32("idlote");
+                                Lote lote1 = new Lote();
+                                lote.idlote = reader.GetInt32("id_lotes");
                                 lote.Descricao = reader.GetString("descricao");
                                 lote.ValorUnitario = reader.GetDouble("valor_unitario");
                                 lote.QuantidadeTotal = reader.GetInt32("quantidade_total");
                                 lote.Saldo = reader.GetInt32("saldo");
                                 lote.Ativo = reader.GetBoolean("ativo");
-                                lote.IdEvento = reader.GetInt32("evento_idevento");
+                                lote.IdEvento = reader.GetInt32("evento_id_evento");
                                
                                
                                
@@ -105,7 +105,7 @@ namespace API_FESTAJUNINA.DAO
  
                 public void CriarLote(Lote lote)
                 {
-                    string query = "INSERT INTO lote (descricao,valor_unitario,quantidade_total,saldo,ativo,evento_idevento ) VALUES (@Descricao,@ValorUnitario, @QuantidadeTotal, @Saldo, @Ativo, @IdEvento)";
+                    string query = "INSERT INTO lotes (descricao,valor_unitario,quantidade_total,saldo,ativo,evento_id_evento ) VALUES (@Descricao,@ValorUnitario, @QuantidadeTotal, @Saldo, @Ativo, @IdEvento)";
                    
  
  
@@ -117,7 +117,7 @@ namespace API_FESTAJUNINA.DAO
                             command.Parameters.AddWithValue("@Descricao", lote.Descricao);
                             command.Parameters.AddWithValue("@ValorUnitario", lote.ValorUnitario);
                             command.Parameters.AddWithValue("@QuantidadeTotal", lote.QuantidadeTotal);
-                            command.Parameters.AddWithValue("@saldo", lote.Saldo);
+                            command.Parameters.AddWithValue("@Saldo", lote.Saldo);
                             command.Parameters.AddWithValue("@Ativo", lote.Ativo);
                             command.Parameters.AddWithValue("@IdEvento", lote.IdEvento);
                            
@@ -142,14 +142,14 @@ namespace API_FESTAJUNINA.DAO
  
             public void AtualizarLote(int id, Lote lote)
             {
-                string query = "UPDATE lote SET " +
-                                " descricao=@Descricao, " +
-                                " valor_unitario=@ValorUnitario, " +
-                                " quantidade_total=@QuantidadeTotal, " +
-                                " saldo=@Saldo, " +  
-                                "ativo=@Ativo, " +
-                                "evento_idevento= @IdEvento " +
-                                "WHERE idlote=@idlote"
+                string query = "UPDATE lotes SET " +
+                                " descricao = @Descricao, " +
+                                " valor_unitario = @ValorUnitario, " +
+                                " quantidade_total = @QuantidadeTotal, " +
+                                " saldo = @Saldo, " +  
+                                " ativo = @Ativo, " +
+                                " evento_id_evento = @IdEvento " +
+                                " WHERE id_lotes = @IdLote"
                                  ;
                        
  
@@ -159,7 +159,7 @@ namespace API_FESTAJUNINA.DAO
                    _connection.Open();
                     using(var command = new MySqlCommand(query, _connection))
                        
-                    {       command.Parameters.AddWithValue("@idlote", id);
+                    {       command.Parameters.AddWithValue("@IdLote", id);
                             command.Parameters.AddWithValue("@Descricao", lote.Descricao);
                             command.Parameters.AddWithValue("@ValorUnitario", lote.ValorUnitario);
                             command.Parameters.AddWithValue("@QuantidadeTotal", lote.QuantidadeTotal);
@@ -186,14 +186,14 @@ namespace API_FESTAJUNINA.DAO
  
             public void DeletarLote (int id)
             {
-                string query = "DELETE FROM lote WHERE idlote = @idlote";
+                string query = "DELETE FROM lotes WHERE id_lotes = @IdLote";
  
                 try
                 {
                     _connection.Open();
                     using(var command = new MySqlCommand(query, _connection))
                     {
-                        command.Parameters.AddWithValue("@idlote", id);
+                        command.Parameters.AddWithValue("@IdLote", id);
                         command.ExecuteNonQuery();
                     }
                 }

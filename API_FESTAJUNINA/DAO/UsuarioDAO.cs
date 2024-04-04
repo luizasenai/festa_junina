@@ -13,6 +13,7 @@ namespace API_FESTAJUNINA.DAO
 {
     public class UsuariosDAO
     {
+        private const string Name = "status";
         private MySqlConnection _connection;
 
         public UsuariosDAO()
@@ -35,7 +36,7 @@ namespace API_FESTAJUNINA.DAO
                     while (reader.Read())
                     {
                         Usuarios usuario = new Usuarios();
-                        usuario.IdUsuario = reader.GetInt32("id_usuarios");
+                        usuario.IdUsuario = reader.GetInt32("id_usuario");
                         usuario.NomeInteiro = reader.GetString("nome_inteiro");
                         usuario.Email = reader.GetString("email");
                         usuario.Senha = reader.GetString("senha");
@@ -65,7 +66,7 @@ namespace API_FESTAJUNINA.DAO
          public Usuarios GetId(int id)
          {
              Usuarios usuario = new Usuarios();
-             string query = $"SELECT * FROM usuario Where id_usuario = {id}";
+             string query = $"SELECT * FROM usuario WHERE id_usuario = {id}";
              try
              {
                  _connection.Open();
@@ -203,7 +204,6 @@ namespace API_FESTAJUNINA.DAO
             }
 
         }
-
         internal void FazerUsuario(Usuarios usuario)
         {
             throw new NotImplementedException();
