@@ -204,10 +204,7 @@ namespace API_FESTAJUNINA.DAO
             }
 
         }
-        internal void FazerUsuario(Usuarios usuario)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
             

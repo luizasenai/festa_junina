@@ -14,7 +14,6 @@ public class UsuariosController : ControllerBase
 {
 
     private UsuariosDAO _usuariosDAO;
-    private object usuarios;
 
     public UsuariosController()
     {
@@ -22,28 +21,53 @@ public class UsuariosController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAll()
+    public IActionResult Get()
     {
-        var personagem = _usuariosDAO.GetAll();
+        var usuarios = _usuariosDAO.GetAll();
         return Ok(usuarios);
     }
 
     [HttpGet("{id}")]
     public IActionResult GetId(int id)
     {
-        var Usuarios = _usuariosDAO;
-        if (Usuarios == null)
+        var usuario = _usuariosDAO;
+        if (usuario == null)
         {
             return NotFound();
         }
-        return Ok(Usuarios);
+        return Ok(usuario);
     }
 
-    // [HttpPost]
-    // public IActionResult CriarUsuarios(Usuarios Usuarios)
-    // {
-    //     _UsuariosDAO.CriarUsuarios(Usuarios)
-    //     }
+    [HttpPost]
+    public IActionResult CriarUsuarios(Usuarios Usuarios)
+    {
+       _usuariosDAO.CriarUsario(Usuarios);
+       return Ok();
+    }
+
+    [HttpPut("{id}")]
+    public IActionResult AtualizarUsuarios(int id, Usuarios usuarios)
+    {
+        if (_usuariosDAO.GetId(id) == null)
+        {
+            return NotFound();
+        }
+
+        _usuariosDAO.AtualizarUsuarios(id, usuarios);
+
+        return Ok();
+    }
+
+    [HttpDelete]
+    public IActionResult DeletarUsuarios(int id, Usuarios usuarios)
+    {
+        if(_usuariosDAO.GetId(id) == null)
+        {
+            return NotFound();
+        }
+        _usuariosDAO.DeletarUsuario(id);
+        return Ok();
+    }
 
 
 }

@@ -105,7 +105,6 @@ namespace API_FESTAJUNINA.DAO
             string query = "INSERT INTO ingresso (valor, status, tipo, codigo_qr,pedido_id_pedido, lotes_id_lotes)" +
                            "values (@Valor, @Status, @Tipo, @CodigoQr, @IdPedido, @LotesId)";
 
-            Console.WriteLine(Guid.NewGuid());
             try
             {
                 _connection.Open();
