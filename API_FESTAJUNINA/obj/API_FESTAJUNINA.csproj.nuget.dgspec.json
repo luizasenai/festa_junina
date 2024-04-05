@@ -1,47 +1,30 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\lucas.unzer\\Documents\\unzer\\carlao\\segundo_ano\\back\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj": {}
+    "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas.unzer\\Documents\\unzer\\carlao\\segundo_ano\\back\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj": {
+    "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas.unzer\\Documents\\unzer\\carlao\\segundo_ano\\back\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+        "projectUniqueName": "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
         "projectName": "API_FESTAJUNINA",
-        "projectPath": "C:\\Users\\lucas.unzer\\Documents\\unzer\\carlao\\segundo_ano\\back\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
-        "packagesPath": "C:\\Users\\lucas.unzer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas.unzer\\Documents\\unzer\\carlao\\segundo_ano\\back\\festa_junina\\API_FESTAJUNINA\\obj\\",
+        "projectPath": "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+        "packagesPath": "C:\\Users\\Pedro.Milani\\.nuget\\packages\\",
+        "outputPath": "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lucas.unzer\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-    "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj": {}
-  },
-  "projects": {
-    "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
-        "projectName": "API_FESTAJUNINA",
-        "projectPath": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
-        "packagesPath": "C:\\Users\\julia.almeida\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\festa_junina\\API_FESTAJUNINA\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\julia.almeida\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> Stashed changes
+          "C:\\Users\\Pedro.Milani\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -49,29 +32,28 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-<<<<<<< Updated upstream
-              "version": "[7.0.9, )"
-            },
-            "Mysql.Data": {
-=======
-              "version": "[7.0.10, )"
+              "version": "[8.0.2, )"
             },
             "MySql.Data": {
->>>>>>> Stashed changes
               "target": "Package",
               "version": "[8.3.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -85,24 +67,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.16, 7.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.16, 7.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.16, 7.0.16]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.16, 7.0.16]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -111,11 +75,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< Updated upstream
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> Stashed changes
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

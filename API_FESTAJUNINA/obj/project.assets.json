@@ -2235,19 +2235,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\unzerxz\\.nuget\\packages\\": {}
+    "C:\\Users\\Pedro.Milani\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\unzerxz\\Documents\\unzer\\programação\\back\\C#\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+      "projectUniqueName": "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
       "projectName": "API_FESTAJUNINA",
-      "projectPath": "C:\\Users\\unzerxz\\Documents\\unzer\\programação\\back\\C#\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
-      "packagesPath": "C:\\Users\\unzerxz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\unzerxz\\Documents\\unzer\\programação\\back\\C#\\festa_junina\\API_FESTAJUNINA\\obj\\",
+      "projectPath": "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\API_FESTAJUNINA.csproj",
+      "packagesPath": "C:\\Users\\Pedro.Milani\\.nuget\\packages\\",
+      "outputPath": "C:\\projetos\\festa_junina\\API_FESTAJUNINA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\unzerxz\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Pedro.Milani\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2317,7 +2317,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\Users\\unzerxz\\Documents\\unzer\\programação\\back\\C#\\festa_junina\\API_FESTAJUNINA\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problema ao ler o arquivo de cache C:\\projetos\\festa_junina\\API_FESTAJUNINA\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

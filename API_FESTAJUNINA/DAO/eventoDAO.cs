@@ -23,10 +23,12 @@ public class EventoDao
         {
             var evento = new Evento
             {
-                IdEvento = reader.GetInt32("id"),
+                IdEvento = reader.GetInt32("id_evento"),
+                ValorUnitario = reader.GetInt32("valor_unitario"),
+                QuantidadeTotal = reader.GetInt32("quantidade_total"),
+                Saldo = reader.GetInt32("saldo"),
                 Descricao = reader.GetString("descricao"),
                 DataEvento = reader.GetDateTime("data_evento"),
-                TotalIngressos = reader.GetInt32("total_ingressos"),
                 ImagemUrl = reader.GetString("imagem_url"),
                 Local = reader.GetString("local"),
                 Ativo = reader.GetInt32("ativo")
@@ -75,7 +77,7 @@ public class EventoDao
         try
         {
             _connection.Open();
-            var query = "SELECT * FROM evento Where id = @Id";
+            var query = "SELECT * FROM evento Where id_evento = @Id";
  
             var command = new MySqlCommand(query, _connection);
             command.Parameters.AddWithValue("@Id", id);
@@ -106,14 +108,16 @@ public class EventoDao
         try
         {
             _connection.Open();
-            const string query = "INSERT INTO evento (id, descricao, data_evento, total_ingressos, imagem_url, local, ativo) " +
-                                 "VALUES(@Id,  @Descricao, @DataEvento, @TotalIngressos, @ImagemUrl, @Local, @Ativo)";
+            const string query = "INSERT INTO evento (valor_unitario, quantidade_total, saldo, descricao, data_evento, imagem_url, local, ativo) " +
+                                 "VALUES(@ValorUnitario, @QuantidadeTotal, @Saldo, @Descricao, @DataEvento, @ImagemUrl, @Local, @Ativo)";
  
             using var command = new MySqlCommand(query, _connection);
             command.Parameters.AddWithValue("@Id", evento.IdEvento);
+            command.Parameters.AddWithValue("@ValorUnitario", evento.ValorUnitario);
+            command.Parameters.AddWithValue("@QuantidadeTotal", evento.QuantidadeTotal);
+            command.Parameters.AddWithValue("@Saldo", evento.Saldo);
             command.Parameters.AddWithValue("@Descricao", evento.Descricao);
             command.Parameters.AddWithValue("@DataEvento", evento.DataEvento);
-            command.Parameters.AddWithValue("@TotalIngressos", evento.TotalIngressos);
             command.Parameters.AddWithValue("@ImagemUrl", evento.ImagemUrl);
             command.Parameters.AddWithValue("@Local", evento.Local);
             command.Parameters.AddWithValue("@Ativo", evento.Ativo);
@@ -142,20 +146,24 @@ public class EventoDao
         {
             _connection.Open();
             const string query = "UPDATE evento SET " +
+                                 "valor_unitario = @ValorUnitario, " +
+                                 "quantidade_total = @QuantidadeTotal, " +
+                                 "saldo = @Saldo, " +
                                  "descricao = @Descricao, " +
                                  "data_evento = @DataEvento, " +
-                                 "total_ingressos = @TotalIngressos, " +
                                  "imagem_url = @ImagemUrl, " +
                                  "local = @Local, " +
                                  "ativo = @Ativo " +
-                                 "WHERE id = @Id";
+                                 "WHERE id_evento = @Id";
  
             using var command = new MySqlCommand(query, _connection);
  
             command.Parameters.AddWithValue("@Id", evento.IdEvento);
+            command.Parameters.AddWithValue("@ValorUnitario", evento.ValorUnitario);
+            command.Parameters.AddWithValue("@QuantidadeTotal", evento.QuantidadeTotal);
+            command.Parameters.AddWithValue("@Saldo", evento.Saldo);
             command.Parameters.AddWithValue("@Descricao", evento.Descricao);
             command.Parameters.AddWithValue("@DataEvento", evento.DataEvento);
-            command.Parameters.AddWithValue("@TotalIngressos", evento.TotalIngressos);
             command.Parameters.AddWithValue("@ImagemUrl", evento.ImagemUrl);
             command.Parameters.AddWithValue("@Local", evento.Local);
             command.Parameters.AddWithValue("@Ativo", evento.Ativo);
@@ -183,7 +191,7 @@ public class EventoDao
         try
         {
             _connection.Open();
-            const string query = "DELETE FROM evento WHERE id = @Id";
+            const string query = "DELETE FROM evento WHERE id_evento = @Id";
  
             using var command = new MySqlCommand(query, _connection);
  
