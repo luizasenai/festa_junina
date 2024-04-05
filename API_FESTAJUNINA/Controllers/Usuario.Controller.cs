@@ -30,7 +30,7 @@ public class UsuariosController : ControllerBase
     [HttpGet("{id}")]
     public IActionResult GetId(int id)
     {
-        var usuario = _usuariosDAO;
+        var usuario = _usuariosDAO.GetId(id);
         if (usuario == null)
         {
             return NotFound();

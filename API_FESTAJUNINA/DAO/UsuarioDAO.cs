@@ -13,7 +13,6 @@ namespace API_FESTAJUNINA.DAO
 {
     public class UsuariosDAO
     {
-        private const string Name = "status";
         private MySqlConnection _connection;
 
         public UsuariosDAO()
@@ -42,6 +41,7 @@ namespace API_FESTAJUNINA.DAO
                         usuario.Senha = reader.GetString("senha");
                         usuario.Telefone = reader.GetString("telefone");
                         usuario.Perfil = reader.GetString("perfil");
+                        usuario.Status = reader.GetInt32("status");
                         usuarios.Add(usuario);
                     }
                 }
@@ -78,8 +78,10 @@ namespace API_FESTAJUNINA.DAO
                          usuario.IdUsuario = reader.GetInt32("id_usuario");
                          usuario.NomeInteiro = reader.GetString("nome_inteiro");
                          usuario.Email = reader.GetString("email");
+                         usuario.Senha = reader.GetString("senha");
                          usuario.Telefone = reader.GetString("telefone");
                          usuario.Perfil = reader.GetString("perfil");
+                         usuario.Status = reader.GetInt32("status");
                     }
                  }
              }
@@ -101,14 +103,13 @@ namespace API_FESTAJUNINA.DAO
         public void AtualizarUsuarios(int id, Usuarios usuario)
         {
             string query = "UPDATE usuario SET " +
-            "id_usuario=@id_usuario, " +
             "nome_inteiro=@nome_inteiro, " +
             "email=@email, " +
             "senha=@senha, " +
             "telefone=@telefone, " +
             "perfil=@perfil, " +
             "status=@status " +
-            "WHERE id_pedido=@id_pedido";
+            "WHERE id_usuario=@id_usuario";
 
             try
             {
@@ -121,8 +122,8 @@ namespace API_FESTAJUNINA.DAO
                     command.Parameters.AddWithValue("@senha", usuario.Senha);
                     command.Parameters.AddWithValue("@telefone", usuario.Telefone);
                     command.Parameters.AddWithValue("@perfil", usuario.Perfil);
-                    command.Parameters.AddWithValue("id_usuario", usuario.IdUsuario);
                     command.Parameters.AddWithValue("@status", usuario.Status);
+                    command.Parameters.AddWithValue("@id_usuario", usuario.IdUsuario);
                     command.ExecuteNonQuery();
                 }
 
@@ -172,8 +173,8 @@ namespace API_FESTAJUNINA.DAO
 
         public void CriarUsario(Usuarios usuario)
         {
-            string query = "INSERT INTO usuario (@nome_inteiro, @email,  @senha, @telefone, @perfil, @id_usuario, @status)" +
-                        "VALUES ( nome_inteiro, email,  senha, telefone, perfil, id_usuario, status)";
+            string query = "INSERT INTO usuario (nome_inteiro, email,  senha, telefone, perfil, status)" +
+                        "VALUES (@nome_inteiro, @email,  @senha, @telefone, @perfil, @status)";
 
             try
             {
@@ -185,7 +186,6 @@ namespace API_FESTAJUNINA.DAO
                     command.Parameters.AddWithValue("@senha", usuario.Senha);
                     command.Parameters.AddWithValue("@telefone", usuario.Telefone);
                     command.Parameters.AddWithValue("@perfil", usuario.Perfil);
-                    command.Parameters.AddWithValue("@id_usuario", usuario.IdUsuario);
                     command.Parameters.AddWithValue("@status", usuario.Status);
                     command.ExecuteNonQuery();
                 }
