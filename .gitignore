@@ -3,3 +3,7 @@
 /API_FESTAJUNINA/bin
 API_FESTAJUNINA/Properties/launchSettings.json
 API_FESTAJUNINA/Repository/MySqlConnectionFactory.cs
+API_FESTAJUNINA/obj/API_FESTAJUNINA.csproj.nuget.dgspec.json
+API_FESTAJUNINA/obj/API_FESTAJUNINA.csproj.nuget.g.props
+API_FESTAJUNINA/obj/project.assets.json
+API_FESTAJUNINA/obj/project.nuget.cache

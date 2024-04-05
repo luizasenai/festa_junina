@@ -29,7 +29,10 @@ namespace API_FESTAJUNINA.Models
         [Column ("status")]
          public string? status {get; set;}
 
-        [Column ("validar_id_usuario")]
-        public int validar_id_usuario {get; set;}
+        [Column ("validacao_id_usuario")]
+        public int validacao_id_usuario {get; set;}
+
+        [Column ("usuario_id_usuario")]
+        public int usuario_id_usuario {get; set;}
     }
 }
